@@ -22,7 +22,7 @@ const SongCard = ({ song, isPlaying, activeSong, i, data}) => {
       <div className="relative w-full h-56 group">
         {/* Hovering on song */}
         <div
-          className={`absolute inset-0 justify-center items-center bg-black bg-opacity-50 group-hover:flex ${
+          className={`absolute inset-0 justify-center rounded-lg items-center bg-black bg-opacity-50 group-hover:flex ${
             activeSong?.title === song.title
               ? "flex bg-black bg-opacity-70"
               : "hidden"
@@ -37,7 +37,7 @@ const SongCard = ({ song, isPlaying, activeSong, i, data}) => {
           />
         </div>
         {/* Loading the image cover of the song */}
-        <img alt="song_img" src={song.images?.coverart} />
+        <img className='rounded-lg' alt="song_img" src={song.images?.coverart} />
       </div>
 
       {/* Showing the title and the subtitle */}
